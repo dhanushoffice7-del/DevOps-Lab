@@ -19,9 +19,14 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/yourusername/devops-cicd-lab.git'
+                    url:' https://github.com/dhanushoffice7-del/DevOps-Lab.git'
             }
         }
+     environment {
+
+             DOCKERHUB_REPO="konankidhanush/devops-cicd-lab"
+
+}
 
         stage('Build with Maven') {
             steps {
