@@ -17,5 +17,5 @@ WORKDIR /app
 # Copy only the built jar from the build stage
 COPY --from=build /app/target/devops-cicd-lab.jar app.jar
 
-EXPOSE 8080
+EXPOSE 4040
 ENTRYPOINT ["java", "-jar", "app.jar"]
